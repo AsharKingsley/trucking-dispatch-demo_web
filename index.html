@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divine Women of Virtue DWV Trucking Service LLC — Augusta, GA Carrier</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-main: #050407;
+  --bg-surface: #0f0b14;
+  --bg-surface-elevated: #16111f;
+  --pink-dark: #b31b60;
+  --pink-main: #d9267c;
+  --pink-light: #ff9ebb;
+  --pink-soft: rgba(217, 38, 124, 0.12);
+  --pink-glow: rgba(217, 38, 124, 0.25);
+  
+  /* Deep Black Glowing Variables */
+  --black-glow-intense: 0 0 35px rgba(0, 0, 0, 0.95), 0 0 70px rgba(5, 4, 7, 0.85);
+  --black-glow-subtle: 0 15px 40px rgba(0, 0, 0, 0.9), inset 0 0 20px rgba(0, 0, 0, 0.7);
+  --border-dark-glow: 1px solid rgba(255, 255, 255, 0.04);
+
+  --text-primary: #ffffff;
+  --text-secondary: #b3adbc;
+  --text-muted: #787182;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --max-width: 1200px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 15px; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Master background viewport */
+.bg-viewport {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background: linear-gradient(rgba(5, 4, 7, 0.82), rgba(5, 4, 7, 0.94)), url('starter background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+.glow-1 { width: 700px; height: 700px; background: #e03189; top: -150px; right: -150px; }
+.glow-2 { width: 600px; height: 600px; background: #821046; bottom: 5%; left: -150px; }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height: 1.15; color: #fff; letter-spacing: -0.02em; }
+.eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: var(--pink-light); margin-bottom: 0.85rem; display: inline-block; }
+
+/* Enhanced Black Glowing Card Surfaces */
+.card-surface {
+  background: rgba(12, 9, 16, 0.92);
+  backdrop-filter: blur(14px);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--black-glow-subtle);
+  border: var(--border-dark-glow);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card-surface:hover { 
+  background: rgba(18, 13, 24, 0.96); 
+  transform: translateY(-4px); 
+  box-shadow: var(--black-glow-intense), 0 25px 50px rgba(0, 0, 0, 0.95);
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 0.88rem;
+  cursor: pointer; border: none; transition: all 0.25s ease; font-family: var(--font-body); text-decoration: none;
+}
+.btn-pink { background: var(--pink-main); color: #fff; box-shadow: 0 8px 24px var(--pink-glow), var(--black-glow-subtle); }
+.btn-pink:hover { background: var(--pink-dark); transform: translateY(-2px); box-shadow: 0 12px 30px var(--pink-glow), var(--black-glow-intense); }
+.btn-dark { background: var(--bg-surface-elevated); color: var(--text-primary); box-shadow: var(--black-glow-subtle); }
+.btn-dark:hover { background: #1d1727; color: var(--pink-light); transform: translateY(-2px); box-shadow: var(--black-glow-intense); }
+.btn-soft { background: var(--pink-soft); color: var(--pink-light); }
+.btn-soft:hover { background: rgba(217, 38, 124, 0.22); color: #fff; }
+
+/* Dedicated Starter Splash Overlay with Heavy Black Glow */
+.starter-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  background: linear-gradient(rgba(5, 4, 7, 0.9), rgba(5, 4, 7, 0.98)), url('starter background.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.starter-splash.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash-content {
+  max-width: 750px;
+  padding: 50px;
+  background: rgba(8, 6, 12, 0.95);
+  backdrop-filter: blur(18px);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: var(--black-glow-intense);
+  transform: translateY(0);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.starter-splash.fade-out .splash-content {
+  transform: translateY(-20px);
+}
+
+.splash-logo {
+  width: 80px; height: 80px; object-fit: cover; border-radius: 50%;
+  border: 2px solid var(--pink-main); background: var(--bg-surface);
+  margin: 0 auto 20px; box-shadow: 0 0 25px var(--pink-glow), var(--black-glow-subtle);
+}
+.splash-content h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  margin-bottom: 16px;
+}
+.splash-content h1 span { color: var(--pink-light); }
+.splash-content p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+.splash-badge-box {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.splash-pill {
+  padding: 6px 14px;
+  background: var(--pink-soft);
+  color: var(--pink-light);
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: var(--black-glow-subtle);
+}
+
+/* Main Website Content Initial State for Fade-In Effect */
+#main-website {
+  opacity: 0;
+  transition: opacity 1s ease 0.3s;
+}
+#main-website.visible {
+  opacity: 1;
+}
+
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 16px 0;
+  background: rgba(5, 4, 7, 0.9); backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand-logo {
+  width: 44px; height: 44px; object-fit: cover; border-radius: 50%;
+  border: 1px solid var(--pink-main); background: var(--bg-surface);
+  box-shadow: var(--black-glow-subtle);
+}
+.brand-text { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: #fff; line-height: 1.2; }
+.brand-text span { color: var(--pink-main); }
+.brand-text small { display: block; font-family: var(--font-body); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
+
+.nav-links { display: flex; gap: 8px; list-style: none; }
+.nav-links a { padding: 8px 14px; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+.nav-links a:hover { color: #fff; background: var(--pink-soft); text-shadow: 0 0 10px rgba(0,0,0,0.8); }
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.phone-link { font-size: 0.85rem; font-weight: 700; color: var(--pink-light); text-decoration: none; text-shadow: 0 2px 8px rgba(0,0,0,0.9); }
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  padding: 140px 0 80px;
+  background: var(--bg-main);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.hero-banner-wrap {
+  width: 100%;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 40px;
+  position: relative;
+  box-shadow: var(--black-glow-intense);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.hero-banner-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5, 4, 7, 0.98), rgba(5, 4, 7, 0.25));
+  display: flex;
+  align-items: flex-end;
+  padding: 36px;
+  box-shadow: inset 0 -40px 40px rgba(0,0,0,0.8);
+}
+.hero-banner-caption {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+}
+.hero-banner-caption span { color: var(--pink-light); }
+
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+.hero-content h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0,0,0,0.7); }
+.hero-content h1 .glow-text { color: var(--pink-light); text-shadow: 0 0 20px rgba(255, 158, 187, 0.3), 0 4px 15px rgba(0,0,0,0.9); }
+.hero-content p.lead { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 32px; max-width: 520px; text-shadow: 0 1px 5px rgba(0,0,0,0.8); }
+
+.status-badge {
+  display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px;
+  border-radius: 99px; background: rgba(12, 9, 16, 0.95); font-size: 0.78rem; font-weight: 600; color: var(--pink-light); margin-bottom: 24px;
+  box-shadow: var(--black-glow-subtle);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.dot-live { width: 8px; height: 8px; border-radius: 50%; background: var(--pink-main); box-shadow: 0 0 12px var(--pink-main), 0 0 5px #000; }
+
+.hero-credentials { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; padding-top: 28px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.cred-item { font-size: 0.75rem; color: var(--text-muted); text-shadow: 0 1px 3px rgba(0,0,0,0.9); }
+.cred-item b { display: block; font-family: var(--font-display); font-size: 1.2rem; color: #fff; margin-bottom: 2px; }
+.cred-item b span { color: var(--pink-light); }
+
+.estimator-card { 
+  padding: 36px; border-radius: var(--radius-lg); 
+  background: rgba(12, 9, 16, 0.94); backdrop-filter: blur(14px); 
+  box-shadow: var(--black-glow-intense); 
+  border: 1px solid rgba(255, 255, 255, 0.05); 
+}
+.est-field { margin-bottom: 18px; }
+.est-label { display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); margin-bottom: 8px; }
+.est-select { width: 100%; padding: 13px 16px; border-radius: var(--radius-sm); background: #030204; border: 1px solid rgba(255,255,255,0.06); color: #fff; font-family: var(--font-body); font-size: 0.9rem; outline: none; box-shadow: inset 0 2px 6px rgba(0,0,0,0.9); }
+.range-wrap { display: flex; align-items: center; gap: 12px; }
+.range-slider { flex: 1; accent-color: var(--pink-main); cursor: pointer; }
+.add-ons { display: flex; gap: 20px; margin: 16px 0 20px; }
+.add-on-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--text-secondary); cursor: pointer; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+.add-on-item input { accent-color: var(--pink-main); }
+
+.est-output { background: #030204; border-radius: var(--radius-sm); padding: 20px; text-align: center; margin-bottom: 20px; box-shadow: inset 0 2px 10px rgba(0,0,0,0.95); border: 1px solid rgba(255,255,255,0.03); }
+.est-price { font-family: var(--font-display); font-size: 1.65rem; font-weight: 800; color: var(--pink-light); line-height: 1.2; white-space: nowrap; text-shadow: 0 2px 8px rgba(0,0,0,0.9); }
+.est-breakdown { font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; }
+.est-eta { font-size: 0.82rem; color: var(--pink-main); font-weight: 700; margin-top: 4px; }
+
+section.block-sec { position: relative; padding: 100px 0; }
+.sec-head { max-width: 620px; margin-bottom: 56px; }
+.sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+.sec-head h2 { font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 14px; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+.sec-head p { color: var(--text-secondary); font-size: 1rem; }
+
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.service-icon { font-size: 2rem; margin-bottom: 16px; display: inline-block; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.9)); }
+.service-card h3 { font-size: 1.35rem; margin-bottom: 10px; }
+.service-card p { font-size: 0.9rem; color: var(--text-secondary); }
+
+.equip-nav { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+.tab-btn { padding: 10px 24px; border-radius: 99px; background: rgba(12, 9, 16, 0.92); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.04); color: var(--text-secondary); font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.25s; box-shadow: var(--black-glow-subtle); }
+.tab-btn.active, .tab-btn:hover { background: var(--pink-main); color: #fff; box-shadow: 0 0 20px var(--pink-glow), var(--black-glow-intense); }
+
+.fleet-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.fleet-card { display: flex; flex-direction: column; justify-content: space-between; }
+.fleet-card .tag { display: inline-block; padding: 4px 12px; border-radius: 6px; background: var(--pink-soft); color: var(--pink-light); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; margin-bottom: 16px; align-self: flex-start; box-shadow: var(--black-glow-subtle); }
+.fleet-card h3 { font-size: 1.6rem; margin-bottom: 10px; }
+.fleet-card p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; }
+
+.spec-list { list-style: none; margin-bottom: 24px; }
+.spec-list li { padding: 6px 0 6px 20px; position: relative; color: var(--text-secondary); font-size: 0.88rem; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+.spec-list li::before { content: ''; position: absolute; left: 0; top: 14px; width: 6px; height: 6px; border-radius: 50%; background: var(--pink-main); box-shadow: 0 0 6px var(--pink-main), 0 0 4px #000; }
+
+.truck-img-wrapper { width: 100%; height: 220px; border-radius: var(--radius-md); overflow: hidden; position: relative; box-shadow: inset 0 0 15px rgba(0,0,0,0.9); border: 1px solid rgba(255,255,255,0.04); }
+.truck-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.fleet-card:hover .truck-img-wrapper img { transform: scale(1.05); }
+
+.doc-hub { 
+  margin-top: 60px; padding: 40px; border-radius: var(--radius-lg); 
+  background: rgba(12, 9, 16, 0.94); backdrop-filter: blur(14px); 
+  display: flex; align-items: center; justify-content: space-between; gap: 24px; 
+  box-shadow: var(--black-glow-intense);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.doc-hub-text h3 { font-size: 1.6rem; margin-bottom: 6px; }
+.doc-hub-text p { color: var(--text-secondary); font-size: 0.95rem; }
+.doc-btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Modal Styles with Heavy Black Glow */
+.modal-backdrop { 
+  position: fixed; inset: 0; z-index: 10000; 
+  background: rgba(3, 2, 5, 0.92); backdrop-filter: blur(12px); 
+  display: flex; align-items: center; justify-content: center; padding: 20px; 
+  opacity: 0; pointer-events: none; transition: opacity 0.3s ease; 
+}
+.modal-backdrop.active { opacity: 1; pointer-events: auto; }
+.modal-box { 
+  background: #0c0910; border-radius: var(--radius-lg); max-width: 480px; width: 100%; 
+  padding: 36px; position: relative; 
+  box-shadow: 0 0 50px rgba(0,0,0,0.98), 0 0 100px rgba(0,0,0,0.9); 
+  border: 1px solid rgba(255,255,255,0.06); 
+}
+.modal-close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: var(--text-muted); font-size: 1.8rem; cursor: pointer; }
+
+.lanes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.lane-pill-box { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.lane-pill { padding: 8px 18px; border-radius: 99px; background: rgba(12, 9, 16, 0.92); backdrop-filter: blur(8px); color: var(--text-secondary); font-size: 0.82rem; font-weight: 600; cursor: pointer; box-shadow: var(--black-glow-subtle); border: 1px solid rgba(255,255,255,0.03); }
+.lane-pill:hover, .lane-pill.active { background: var(--pink-main); color: #fff; box-shadow: 0 0 20px var(--pink-glow), var(--black-glow-intense); }
+
+.eld-badge { display: flex; align-items: center; gap: 16px; padding: 20px; border-radius: var(--radius-md); background: rgba(12, 9, 16, 0.92); backdrop-filter: blur(8px); margin-top: 28px; font-size: 0.88rem; color: var(--text-secondary); box-shadow: var(--black-glow-subtle); border: 1px solid rgba(255,255,255,0.04); }
+
+.form-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
+.recruit-card { padding: 36px; border-radius: var(--radius-lg); background: rgba(12, 9, 16, 0.94); backdrop-filter: blur(14px); box-shadow: var(--black-glow-intense); border: 1px solid rgba(255,255,255,0.05); }
+.recruit-card h3 { font-size: 1.65rem; color: var(--pink-light); margin-bottom: 8px; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
+.recruit-card p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; }
+.form-box { padding: 36px; border-radius: var(--radius-lg); background: rgba(12, 9, 16, 0.94); backdrop-filter: blur(14px); box-shadow: var(--black-glow-intense); border: 1px solid rgba(255,255,255,0.05); }
+.field-group { margin-bottom: 18px; }
+.field-group label { display: block; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px; }
+.field-group input, .field-group select, .field-group textarea { width: 100%; padding: 13px 16px; border-radius: var(--radius-sm); background: #030204; border: 1px solid rgba(255,255,255,0.06); color: #fff; font-family: var(--font-body); font-size: 0.9rem; box-shadow: inset 0 2px 6px rgba(0,0,0,0.9); outline: none; }
+.field-group input:focus, .field-group select:focus, .field-group textarea:focus { border-color: var(--pink-main); box-shadow: inset 0 2px 6px rgba(0,0,0,0.9), 0 0 12px var(--pink-glow); }
+.field-group textarea { resize: vertical; min-height: 100px; }
+.two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+/* Rating Stars Widget */
+.rating-stars {
+  color: #ffc107;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.9);
+}
+.rating-stars span {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+footer { background: rgba(10, 7, 14, 0.96); backdrop-filter: blur(14px); padding: 60px 0 30px; font-size: 0.85rem; color: var(--text-muted); margin-top: 60px; box-shadow: var(--black-glow-intense); border-top: 1px solid rgba(255,255,255,0.04); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-grid h4 { font-size: 0.8rem; color: var(--pink-light); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; text-shadow: 0 1px 5px rgba(0,0,0,0.9); }
+.footer-grid a { color: var(--text-muted); text-decoration: none; display: block; margin-bottom: 10px; }
+.footer-grid a:hover { color: var(--pink-light); text-shadow: 0 0 8px rgba(0,0,0,0.9); }
+
+@media (max-width: 960px) {
+  .hero-grid, .fleet-grid, .lanes-grid, .form-grid, .doc-hub, .services-grid { grid-template-columns: 1fr; }
+  .hero-credentials { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Global Master Background Viewport -->
+<div class="bg-viewport">
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+</div>
+
+<!-- FIXED STARTER SPLASH OVERLAY -->
+<div class="starter-splash" id="starterSplash">
+  <div class="splash-content">
+    <img src="Logo.jpg" alt="Logo" class="splash-logo">
+    <p class="eyebrow">Official Asset-Based Carrier Portal</p>
+    <h1>Divine Women of Virtue <span>DWV Trucking</span></h1>
+    <p>Welcome to our official digital portal. Based in Augusta, Georgia, we specialize in secure flatbed transport, automotive shipping, intermodal container drayage, and regulated hazmat freight services across the Southeast and continental United States.</p>
+    
+    <div class="splash-badge-box">
+      <span class="splash-pill">MC 1323307</span>
+      <span class="splash-pill">USDOT 3739668</span>
+      <span class="splash-pill">24/7 Samsara GPS Tracking</span>
+    </div>
+
+    <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+      <button type="button" class="btn btn-pink" style="font-size: 1rem; padding: 16px 36px;" onclick="enterWebsite()">Enter Web ↓</button>
+      <button type="button" class="btn btn-dark" style="font-size: 1rem; padding: 16px 28px;" onclick="openSignInModal()">Sign In</button>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN WEBSITE CONTENT AREA -->
+<div id="main-website">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#splash" class="brand" onclick="resetSplash(event)">
+        <img src="Logo.jpg" alt="DWV Trucking Logo" class="brand-logo">
+        <div class="brand-text">
+          Divine Women of Virtue<span>.</span>
+          <small>DWV Trucking · Augusta, GA</small>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fleet">Equipment Specs</a></li>
+        <li><a href="#compliance">Broker Hub</a></li>
+        <li><a href="#lanes">Lanes</a></li>
+        <li><a href="#drivers">Careers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:7065550199" class="phone-link">📞 (706) 555-0199</a>
+        <a href="#estimator" class="btn btn-pink">Request Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION FEATURING upper background.jpg AS A TOP BANNER IMAGE -->
+  <section class="hero" id="splash">
+    <div class="container">
+      
+      <!-- TOP BANNER IMAGE: upper background.jpg -->
+      <div class="hero-banner-wrap">
+        <img src="upper background.jpg" alt="DWV Trucking Operations Banner">
+        <div class="hero-banner-overlay">
+          <div class="hero-banner-caption">
+            Secure Regional Transport & <span>Asset Logistics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="dot-live"></span>
+            <span>Active Asset Fleet · Augusta, GA Hub</span>
+          </div>
+          <p class="eyebrow">Asset-Based Carrier · Flatbed · Auto · Intermodal · Hazmat</p>
+          <h1>Freight moved with <span class="glow-text">discipline</span> & integrity.</h1>
+          <p class="lead">Divine Women of Virtue DWV Trucking Service LLC delivers top-tier flatbed, automotive transport, intermodal drayage, and hazmat freight services across the Southeast and Continental US. Built on uncompromised safety standards, transparent driver communication, and modern asset logistics.</p>
+          
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <a href="#estimator" class="btn btn-pink">Live Rate Estimator</a>
+            <a href="#compliance" class="btn btn-dark">Broker Onboarding Hub</a>
+          </div>
+
+          <div class="hero-credentials">
+            <div class="cred-item"><b>MC <span>1323307</span></b>Operating Authority</div>
+            <div class="cred-item"><b>USDOT <span>3739668</span></b>Interstate Carrier</div>
+            <div class="cred-item"><b>FMCSA <span>Satisfactory</span></b>Safety Rating</div>
+            <div class="cred-item"><b>Tracking <span>Samsara</span></b>24/7 Live GPS</div>
+          </div>
+        </div>
+
+        <!-- Estimator Calculator Card -->
+        <div class="estimator-card" id="estimator">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px">
+            <h3 style="font-size:1.35rem">Instant Rate & ETA Estimator</h3>
+          </div>
+
+          <div class="est-field">
+            <div class="est-label"><span>Equipment Specification</span></div>
+            <select class="est-select" id="estEquip" onchange="calcRate()">
+              <option value="flatbed">48'/53' Flatbed Deck</option>
+              <option value="auto">Multi-Car Auto Transporter</option>
+              <option value="intermodal">Intermodal Container Chassis</option>
+              <option value="hazmat">Dedicated Hazmat Unit</option>
+            </select>
+          </div>
+
+          <div class="est-field">
+            <div class="est-label">
+              <span>Haul Distance</span>
+              <span id="distDisplay" style="color:var(--pink-light); font-weight:700">450 Miles</span>
+            </div>
+            <div class="range-wrap">
+              <input type="range" class="range-slider" id="estDist" min="50" max="2500" value="450" step="25" oninput="calcRate()">
+            </div>
+          </div>
+
+          <div class="add-ons">
+            <label class="add-on-item"><input type="checkbox" id="addTarp" onchange="calcRate()"> Tarps / Straps</label>
+            <label class="add-on-item"><input type="checkbox" id="addHazmat" onchange="calcRate()"> Hazmat Handling</label>
+          </div>
+
+          <div class="est-output">
+            <div class="est-price" id="estPrice">$1,368 - $1,656</div>
+            <div class="est-breakdown" id="estBreakdown">Linehaul: ~$3.20/mi · Fuel & Surcharge Included</div>
+            <div class="est-eta" id="estETA">Est. Transit: Next-Day Delivery</div>
+          </div>
+
+          <button type="button" class="btn btn-soft" style="width:100%" onclick="applyEstimateToForm()">Book This Estimated Rate ↓</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block-sec" id="services">
+    <div class="container">
+      <div class="sec-head center">
+        <p class="eyebrow">Freight Capabilities</p>
+        <h2>Full-Spectrum Logistics Solutions</h2>
+        <p>Precision-managed asset transport tailored for brokers, manufacturers, and shippers seeking dependable capacity across regional corridors.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card card-surface">
+          <div class="service-icon">🏗️</div>
+          <h3>Flatbed & Open Deck</h3>
+          <p>48' and 53' trailers for heavy industrial equipment, steel, building supplies, and over-dimensional cargo with full strapping and tarping protection.</p>
+          <div class="rating-stars">★★★★★ <span>(4.9 / 5.0 Broker Rating)</span></div>
+        </div>
+        <div class="service-card card-surface">
+          <div class="service-icon">🚘</div>
+          <h3>Auto Transport</h3>
+          <p>Multi-car transport for dealership inventory, auction relocations, and private fleet moves using specialized soft-tie wheel safety straps.</p>
+          <div class="rating-stars">★★★★★ <span>(5.0 / 5.0 Fleet Rating)</span></div>
+        </div>
+        <div class="service-card card-surface">
+          <div class="service-icon">⚓</div>
+          <h3>Intermodal Drayage</h3>
+          <p>TWIC-certified drivers providing rapid port container shuttles between Savannah, Charleston, and inland rail ramps without gate delays.</p>
+          <div class="rating-stars">★★★★★ <span>(4.8 / 5.0 Port Efficiency)</span></div>
+        </div>
+        <div class="service-card card-surface">
+          <div class="service-icon">☣️</div>
+          <h3>Hazmat Transport</h3>
+          <p>DOT-endorsed hazardous materials handling backed by certified safety equipment, compliant placarding, and rigorously trained personnel.</p>
+          <div class="rating-stars">★★★★★ <span>(5.0 / 5.0 Safety Score)</span></div>
+        </div>
+        <div class="service-card card-surface">
+          <div class="service-icon">📦</div>
+          <h3>General Freight FTL</h3>
+          <p>Dedicated full truckload capacity for regional and long-haul lanes across the Southeast and Mid-Atlantic with punctual scheduling.</p>
+          <div class="rating-stars">★★★★★ <span>(4.9 / 5.0 Reliability)</span></div>
+        </div>
+        <div class="service-card card-surface">
+          <div class="service-icon">📡</div>
+          <h3>Samsara ELD Tracking</h3>
+          <p>Real-time GPS visibility, digital proof-of-delivery (POD) uploads, and automated milestone updates for complete shipment transparency.</p>
+          <div class="rating-stars">★★★★★ <span>(4.9 / 5.0 Visibility)</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block-sec" id="fleet">
+    <div class="container">
+      <div class="sec-head center">
+        <p class="eyebrow">Asset Equipment</p>
+        <h2>Fleet Specifications & Specs</h2>
+        <p>Filter through our state-of-the-art fleet categories to review load dimensions, exact weight limits, and specialized hauling features designed for maximum security.</p>
+      </div>
+
+      <div class="equip-nav">
+        <button class="tab-btn active" onclick="filterFleet('all', this)">All Fleet Specs</button>
+        <button class="tab-btn" onclick="filterFleet('flatbed', this)">Flatbed Deck</button>
+        <button class="tab-btn" onclick="filterFleet('auto', this)">Auto Hauler</button>
+        <button class="tab-btn" onclick="filterFleet('intermodal', this)">Intermodal & Hazmat</button>
+      </div>
+
+      <div class="fleet-grid">
+        <div class="fleet-card card-surface fleet-item flatbed">
+          <div>
+            <span class="tag">Open Deck Spec</span>
+            <h3>48' / 53' Flatbed Trailers</h3>
+            <p>Heavy machinery, steel coils, lumber, and structural materials moved with precision securement and routine maintenance checks.</p>
+            <ul class="spec-list">
+              <li>Max Cargo Payload: Up to 48,000 lbs</li>
+              <li>On-board steel & lumber tarps, chains, binders & coil racks</li>
+              <li>Experienced open deck operators adhering strictly to DOT safety</li>
+            </ul>
+            <div class="rating-stars">★★★★★ <span>(4.9/5 Utilization Rating)</span></div>
+          </div>
+          <div class="truck-img-wrapper">
+            <img src="truck.jpg" alt="Flatbed Trailer">
+          </div>
+        </div>
+
+        <div class="fleet-card card-surface fleet-item auto">
+          <div>
+            <span class="tag">Automotive Spec</span>
+            <h3>Multi-Vehicle Auto Carriers</h3>
+            <p>Safe relocation for dealership inventory, auction moves, and private vehicles handled by certified drivers.</p>
+            <ul class="spec-list">
+              <li>Damage-free soft-tie wheel harness securement system</li>
+              <li>Electronic pre-trip & post-delivery vehicle condition reports</li>
+              <li>Full cargo liability coverage up to $100,000 per load</li>
+            </ul>
+            <div class="rating-stars">★★★★★ <span>(5.0/5 Damage-Free Record)</span></div>
+          </div>
+          <div class="truck-img-wrapper">
+            <img src="truck.jpg" alt="Auto Carrier">
+          </div>
+        </div>
+
+        <div class="fleet-card card-surface fleet-item intermodal" style="grid-column: 1 / -1">
+          <div>
+            <span class="tag">Port Drayage & Regulated Spec</span>
+            <h3>Intermodal Drayage & Hazmat Fleet</h3>
+            <p>Rapid container shuttle service for Port of Savannah and Charleston terminals coupled with specialized hazmat transport endorsement capabilities.</p>
+            <ul class="spec-list">
+              <li>TWIC-card credentialed drivers for unhindered port gate access</li>
+              <li>Chassis compatibility for 20ft, 40ft, and 53ft ISO containers</li>
+              <li>FMCSA-certified hazmat safety placards and spill response protocols</li>
+            </ul>
+            <div class="rating-stars">★★★★★ <span>(4.9/5 Port Turnaround Rating)</span></div>
+          </div>
+          <div class="truck-img-wrapper" style="height:250px">
+            <img src="truck.jpg" alt="Intermodal Drayage">
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-hub" id="compliance">
+        <div class="doc-hub-text">
+          <h3>Broker & Shipper Compliance Hub</h3>
+          <p>Instant digital access to active carrier setup credentials, verified tax forms, and insurance certificates to speed up your internal onboarding process.</p>
+        </div>
+        <div class="doc-btn-group">
+          <button class="btn btn-dark" onclick="previewDoc('W-9 Taxpayer Form', 'DWV Trucking Service LLC W-9 (Rev 2024)', 'EIN Verified | Active Status')">📄 W-9 Form</button>
+          <button class="btn btn-dark" onclick="previewDoc('Certificate of Insurance (COI)', 'Progressive Commercial Liability & Cargo', '$1,000,000 Auto Liability | $100,000 Cargo')">🛡️ View COI</button>
+          <button class="btn btn-dark" onclick="previewDoc('FMCSA MC Authority', 'Motor Carrier Operating Authority Letter', 'MC 1323307 - Active Common Carrier Authority')">📜 MC Authority</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block-sec" id="lanes">
+    <div class="container lanes-grid">
+      <div>
+        <p class="eyebrow">Operating Lanes & GPS</p>
+        <h2>Primary Routes & Real-Time Tracking</h2>
+        <p>Operating out of Augusta, GA, we run high-frequency lanes connecting ports, manufacturing hubs, and distribution centers across the Southeast and Eastern seaboard with dependable scheduling.</p>
+        
+        <div class="lane-pill-box">
+          <span class="lane-pill active">Augusta ↔ Port of Savannah</span>
+          <span class="lane-pill">Atlanta ↔ Charleston, SC</span>
+          <span class="lane-pill">Charlotte, NC Corridor</span>
+          <span class="lane-pill">Jacksonville, FL Route</span>
+          <span class="lane-pill">Continental US FTL</span>
+        </div>
+
+        <div class="eld-badge">
+          <span style="font-size:1.6rem">📡</span>
+          <div><b>Samsara ELD Integration:</b> Real-time location updates, automated arrival alerts, and instant electronic POD delivery backed by 24/7 dispatcher oversight.</div>
+        </div>
+      </div>
+
+      <div class="card-surface">
+        <h3 style="font-size:1.45rem; margin-bottom:12px; color:var(--pink-light)">Asset Carrier Advantage</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:16px">When you tender freight to DWV Trucking, you work directly with our asset fleet — guaranteeing zero double brokering or unvetted subcontracting risks.</p>
+        <ul class="spec-list">
+          <li>Direct 24/7 contact with Augusta dispatchers</li>
+          <li>Satisfactory FMCSA safety rating maintained across all units</li>
+          <li>Fast electronic billing and load confirmation turnaround</li>
+        </ul>
+        <div class="rating-stars">★★★★★ <span>(4.98 Overall Partner Rating)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block-sec" id="drivers">
+    <div class="container">
+      <div class="sec-head center">
+        <p class="eyebrow">Get In Touch</p>
+        <h2>Request Freight Quote or Join Our Team</h2>
+      </div>
+
+      <div class="form-grid">
+        <div>
+          <div class="recruit-card">
+            <h3>Apply as CDL-A Driver</h3>
+            <p>We are actively hiring qualified CDL-A drivers for regional flatbed, intermodal drayage, and dedicated container runs with competitive compensation packages.</p>
+            <ul class="spec-list" style="margin-bottom:24px">
+              <li>Top CPM & per-load pay structure</li>
+              <li>Predictable weekly home time in GA & SC</li>
+              <li>Late-model power units with Samsara navigation</li>
+            </ul>
+            <div class="rating-stars" style="margin-bottom:16px;">★★★★★ <span>(4.8 / 5.0 Driver Satisfaction)</span></div>
+            <button class="btn btn-soft" style="width:100%" onclick="setInquiryMode('CDL Driver Application')">Apply as CDL Driver →</button>
+          </div>
+
+          <div style="margin-top:24px; padding:24px" class="card-surface">
+            <h4 style="color:var(--pink-light); margin-bottom:12px">Augusta Dispatch Office</h4>
+            <p style="font-size:0.9rem; color:var(--text-secondary)">📍 Augusta, Georgia 30901</p>
+            <p style="font-size:0.9rem; color:var(--text-secondary)">📞 Dispatch: (706) 555-0199</p>
+            <p style="font-size:0.9rem; color:var(--text-secondary)">✉️ Email: dwvtruckingservice@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="form-box" id="contact">
+          <form id="dispatchForm" onsubmit="handleFormSubmit(event)">
+            <div class="field-group">
+              <label>Inquiry Type</label>
+              <select id="inquiryType">
+                <option value="Freight Rate Quote">Freight Rate Quote</option>
+                <option value="CDL Driver Application">CDL Driver Application</option>
+                <option value="Broker Onboarding">Broker Onboarding</option>
+              </select>
+            </div>
+
+            <div class="two-cols">
+              <div class="field-group">
+                <label>Full Name</label>
+                <input type="text" id="formName" required placeholder="Jane Doe">
+              </div>
+              <div class="field-group">
+                <label>Company / Carrier</label>
+                <input type="text" id="formCompany" placeholder="Logistics Inc">
+              </div>
+            </div>
+
+            <div class="two-cols">
+              <div class="field-group">
+                <label>Email Address</label>
+                <input type="email" id="formEmail" required placeholder="jane@example.com">
+              </div>
+              <div class="field-group">
+                <label>Phone Number</label>
+                <input type="tel" id="formPhone" required placeholder="(706) 555-0199">
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label>Equipment Needed / Experience</label>
+              <select id="formEquip">
+                <option>48'/53' Flatbed Deck</option>
+                <option>Multi-Car Auto Carrier</option>
+                <option>Intermodal Drayage Chassis</option>
+                <option>Hazmat Certified Transport</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label>Load Details / Application Notes</label>
+              <textarea id="formMessage" placeholder="Include pickup/delivery zip codes, commodity weight, or CDL experience..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-pink" style="width:100%; padding:14px">Submit Request to Dispatch</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <img src="Logo.jpg" alt="DWV Trucking Logo" class="brand-logo">
+            <div class="brand-text">Divine Women of Virtue<span>.</span><small>DWV Trucking Service LLC</small></div>
+          </div>
+          <p style="margin-top:14px; font-size:0.85rem; line-height:1.6">Asset-based motor carrier delivering open deck, auto transport, intermodal drayage, and hazmat freight out of Augusta, GA with high performance ratings.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <a href="#services">Services</a>
+          <a href="#fleet">Equipment Specs</a>
+          <a href="#compliance">Broker Hub</a>
+          <a href="#lanes">Lanes</a>
+          <a href="#drivers">Careers</a>
+        </div>
+        <div>
+          <h4>Credentials</h4>
+          <p>MC Number: 1323307</p>
+          <p>USDOT Number: 3739668</p>
+          <p>Location: Augusta, GA</p>
+          <p>Phone: (706) 555-0199</p>
+        </div>
+      </div>
+      <div style="text-align:center; padding-top:24px; border-top:1px solid rgba(255, 255, 255, 0.04); font-size:0.75rem">
+        &copy; Divine Women of Virtue DWV Trucking Service LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Sign-In Modal Form Box -->
+<div class="modal-backdrop" id="signInModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeSignInModal()">&times;</button>
+    <p class="eyebrow">Secure Portal Access</p>
+    <h3 style="font-size:1.6rem; margin-bottom:6px">Carrier & Broker Sign In</h3>
+    <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:24px">Access your load boards, live tracking, and paperwork.</p>
+    
+    <form onsubmit="handleSignIn(event)">
+      <div class="field-group">
+        <label>Email Address / Username</label>
+        <input type="email" required placeholder="broker@logistics.com">
+      </div>
+      <div class="field-group">
+        <label>Password</label>
+        <input type="password" required placeholder="••••••••••••">
+      </div>
+      <button type="submit" class="btn btn-pink" style="width:100%; margin-top:8px">Sign In to Dashboard</button>
+    </form>
+  </div>
+</div>
+
+<!-- Document Preview Modal Box -->
+<div class="modal-backdrop" id="docModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeDocModal()">&times;</button>
+    <p class="eyebrow">Carrier Credential Preview</p>
+    <h3 id="modalTitle" style="font-size:1.55rem; margin-bottom:6px">Document Preview</h3>
+    <p id="modalSub" style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:24px">Official carrier document on file with FMCSA.</p>
+    
+    <div style="background:#030204; padding:24px; border-radius:var(--radius-sm); text-align:center; margin-bottom:24px; box-shadow:inset 0 2px 8px rgba(0,0,0,0.95); border:1px solid rgba(255,255,255,0.03);">
+      <div style="font-size:2.5rem; margin-bottom:8px">📄</div>
+      <div id="modalDetail" style="font-weight:700; color:var(--pink-light)">Carrier Document Details</div>
+      <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px">Ready for immediate rate confirmation setup</div>
+    </div>
+
+    <div style="display:flex; gap:12px">
+      <button class="btn btn-pink" style="width:100%" onclick="triggerDownload()">Download PDF</button>
+      <button class="btn btn-dark" style="width:100%" onclick="closeDocModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function enterWebsite() {
+  const splash = document.getElementById('starterSplash');
+  const mainWeb = document.getElementById('main-website');
+  
+  splash.classList.add('fade-out');
+  mainWeb.classList.add('visible');
+}
+
+function openSignInModal() {
+  document.getElementById('signInModal').classList.add('active');
+}
+
+function closeSignInModal() {
+  document.getElementById('signInModal').classList.remove('active');
+}
+
+function handleSignIn(e) {
+  e.preventDefault();
+  alert("Successfully signed in! Accessing portal dashboard...");
+  closeSignInModal();
+  enterWebsite();
+}
+
+function resetSplash(e) {
+  e.preventDefault();
+  const splash = document.getElementById('starterSplash');
+  const mainWeb = document.getElementById('main-website');
+  
+  splash.classList.remove('fade-out');
+  mainWeb.classList.remove('visible');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function calcRate() {
+  const equipEl = document.getElementById('estEquip');
+  const distEl = document.getElementById('estDist');
+  const distDisplay = document.getElementById('distDisplay');
+  const estPrice = document.getElementById('estPrice');
+  const estBreakdown = document.getElementById('estBreakdown');
+  const estETA = document.getElementById('estETA');
+
+  if (!equipEl || !distEl) return;
+
+  const equip = equipEl.value;
+  const miles = parseInt(distEl.value);
+  const isTarp = document.getElementById('addTarp').checked;
+  const isHazmat = document.getElementById('addHazmat').checked;
+
+  distDisplay.innerText = `${miles} Miles`;
+
+  let perMile = 3.20;
+  if (equip === 'auto') perMile = 3.85;
+  if (equip === 'intermodal') perMile = 3.50;
+  if (equip === 'hazmat') perMile = 4.30;
+
+  if (isTarp) perMile += 0.35;
+  if (isHazmat) perMile += 0.55;
+
+  const total = miles * perMile;
+  const low = Math.max(450, Math.round(total * 0.95));
+  const high = Math.max(600, Math.round(total * 1.15));
+
+  estPrice.innerText = `$${low.toLocaleString()} - $${high.toLocaleString()}`;
+  estBreakdown.innerText = `Linehaul: ~$${perMile.toFixed(2)}/mi · Fuel & Surcharge Included`;
+
+  let eta = "Est. Transit: Same-Day Delivery";
+  if (miles > 400 && miles <= 800) eta = "Est. Transit: Next-Day Delivery";
+  else if (miles > 800) eta = `Est. Transit: ${Math.ceil(miles / 500)} Days Transit`;
+
+  estETA.innerText = eta;
+}
+
+function applyEstimateToForm() {
+  const equipSelect = document.getElementById('estEquip');
+  const equipText = equipSelect.options[equipSelect.selectedIndex].text;
+  const miles = document.getElementById('estDist').value;
+  const price = document.getElementById('estPrice').innerText;
+
+  document.getElementById('inquiryType').value = "Freight Rate Quote";
+  document.getElementById('formMessage').value = `Book Rate Estimate Request:\n- Equipment: ${equipText}\n- Distance: ~${miles} miles\n- Estimated Range: ${price}`;
+  
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+
+function filterFleet(cat, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.fleet-item').forEach(card => {
+    if (cat === 'all' || card.classList.contains(cat)) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+let currentDocTitle = "";
+function previewDoc(title, detail, sub) {
+  currentDocTitle = title;
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDetail').innerText = detail;
+  document.getElementById('modalSub').innerText = sub;
+  document.getElementById('docModal').classList.add('active');
+}
+
+function closeDocModal() {
+  document.getElementById('docModal').classList.remove('active');
+}
+
+function triggerDownload() {
+  alert(`Downloading official PDF for ${currentDocTitle}...` );
+  closeDocModal();
+}
+
+function setInquiryMode(mode) {
+  document.getElementById('inquiryType').value = mode;
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('formName').value;
+  alert(`Thank you, ${name}! Your request has been transmitted directly to DWV Trucking dispatch.`);
+  document.getElementById('dispatchForm').reset();
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  calcRate();
+});
+</script>
+</body>
+</html>
